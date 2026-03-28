@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Official support page for 2ogra, including user support and store review contact guidance."
+  >
+  <title>2ogra Support</title>
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --bg-card: rgba(26, 29, 33, 0.92);
+      --bg-elevated: rgba(32, 36, 42, 0.92);
+      --text: #ffffff;
+      --text-secondary: #d1d5db;
+      --text-muted: #9ca3af;
+      --accent: #f5a623;
+      --accent-soft: rgba(245, 166, 35, 0.14);
+      --border: rgba(245, 166, 35, 0.18);
+      --success: #22c55e;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(245, 166, 35, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(34, 197, 94, 0.12), transparent 24%),
+        linear-gradient(180deg, #12161a 0%, var(--bg) 100%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: #ffd17a;
+    }
+
+    .page {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(245, 166, 35, 0.16), rgba(245, 166, 35, 0.04)),
+        var(--bg-card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.24), transparent 70%);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      font-size: 18px;
+      color: var(--text-secondary);
+    }
+
+    .meta,
+    .summary,
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .meta {
+      margin-top: 24px;
+      gap: 12px;
+    }
+
+    .meta-card,
+    .summary-card,
+    .action-card,
+    .section,
+    .footer {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .meta-card {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .meta-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    .meta-card span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .summary {
+      margin: 28px 0 0;
+    }
+
+    .summary-card,
+    .action-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: var(--bg-elevated);
+    }
+
+    .summary-card h2,
+    .action-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .summary-card p,
+    .action-card p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    .action-card p + p {
+      margin-top: 12px;
+    }
+
+    nav {
+      margin: 24px 0 18px;
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .section {
+      padding: 26px;
+      border-radius: 24px;
+      background: var(--bg-card);
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .section p,
+    .section li {
+      color: var(--text-secondary);
+      font-size: 16px;
+    }
+
+    .section ul {
+      margin: 12px 0 0 18px;
+      padding: 0;
+    }
+
+    .section li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      border-radius: 14px;
+      background: var(--accent-soft);
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 20px 22px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+    }
+
+    .status {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(var(--max-width), calc(100% - 20px));
+        padding-top: 20px;
+      }
+
+      .hero,
+      .section {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">Support • 2ogra</div>
+      <h1>Official support page for users, App Store, and Google Play.</h1>
+      <p>
+        This page is the public support URL for 2ogra. If you need help with the app,
+        want to report a problem, or need clarification during store review, use the
+        contact options below to reach the developer through the project channels.
+      </p>
+
+      <div class="meta">
+        <div class="meta-card">
+          <strong>App</strong>
+          <span>2ogra (Ogra)</span>
+        </div>
+        <div class="meta-card">
+          <strong>Support model</strong>
+          <span class="status">Public web support page with project links</span>
+        </div>
+      </div>
+
+      <div class="summary">
+        <article class="summary-card">
+          <h2>Users</h2>
+          <p>Use the issue tracker for bug reports, support questions, and feature requests related to the app.</p>
+        </article>
+        <article class="summary-card">
+          <h2>Store review teams</h2>
+          <p>Use this page and the listed project links when requesting clarification about app behavior, privacy, or support handling.</p>
+        </article>
+        <article class="summary-card">
+          <h2>Related policies</h2>
+          <p>The English and Arabic privacy policy pages are linked below for convenience during review and support follow-up.</p>
+        </article>
+      </div>
+    </section>
+
+    <nav aria-label="Support sections">
+      <div class="toc">
+        <a href="#channels">Support channels</a>
+        <a href="#store-review">For store teams</a>
+        <a href="#details">What to include</a>
+        <a href="#related">Related pages</a>
+      </div>
+    </nav>
+
+    <div class="grid">
+      <section class="section" id="channels">
+        <h2>1. Support channels</h2>
+        <div class="action-grid">
+          <article class="action-card">
+            <h3>Issue tracker</h3>
+            <p>Preferred channel for app problems, bug reports, broken links, and specific support requests.</p>
+            <p>
+              <a href="https://github.com/AnasKhaled1876/ogra/issues" target="_blank" rel="noreferrer">
+                github.com/AnasKhaled1876/ogra/issues
+              </a>
+            </p>
+          </article>
+
+          <article class="action-card">
+            <h3>Project repository</h3>
+            <p>Use the project page for general project context, release context, and maintainer information.</p>
+            <p>
+              <a href="https://github.com/AnasKhaled1876/ogra" target="_blank" rel="noreferrer">
+                github.com/AnasKhaled1876/ogra
+              </a>
+            </p>
+          </article>
+        </div>
+
+        <div class="note">
+          This is a static support page. Support requests are routed through the project links above rather than an in-page form.
+        </div>
+      </section>
+
+      <section class="section" id="store-review">
+        <h2>2. For App Store and Google Play review teams</h2>
+        <p>
+          If you are reviewing 2ogra and need clarification about app functionality,
+          privacy handling, permissions, or policy compliance, use the issue tracker
+          or repository links on this page to contact the developer through the
+          project’s public support channels.
+        </p>
+        <p>
+          To speed up the response, include the store name, app version or build number,
+          and the exact question or review note you want addressed.
+        </p>
+      </section>
+
+      <section class="section" id="details">
+        <h2>3. What to include in your support request</h2>
+        <ul>
+          <li>The app version or build number you are using.</li>
+          <li>Your device model and operating system version.</li>
+          <li>A short description of the problem or question.</li>
+          <li>Steps to reproduce the problem, if the issue is repeatable.</li>
+          <li>Screenshots or error text when available.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="related">
+        <h2>4. Related pages</h2>
+        <ul>
+          <li><a href="index.html">English privacy policy</a></li>
+          <li><a href="privacy-policy-ar.html" lang="ar" dir="rtl">سياسة الخصوصية باللغة العربية</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="footer">
+      This page can be used as the public support URL for the 2ogra app listing on the App Store and Google Play.
+    </div>
+  </main>
+</body>
+</html>
