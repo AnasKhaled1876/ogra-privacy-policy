@@ -7,6 +7,8 @@
     name="description"
     content="سياسة الخصوصية الخاصة بتطبيق 2ogra (أجرة)، وهو تطبيق تحصيل أجرة يعمل محليًا وبشكل أساسي بدون إنترنت."
   >
+  <link rel="alternate" hreflang="ar" href="privacy-policy-ar.html">
+  <link rel="alternate" hreflang="en" href="index.html">
   <title>سياسة الخصوصية | 2ogra</title>
   <style>
     :root {
@@ -76,6 +78,14 @@
       pointer-events: none;
     }
 
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     .badge,
     .language-switch a {
       display: inline-flex;
@@ -91,8 +101,11 @@
       text-decoration: none;
     }
 
-    .language-switch {
-      margin-top: 16px;
+    .language-switch a:hover,
+    .language-switch a:focus-visible {
+      border-color: rgba(245, 166, 35, 0.32);
+      color: var(--text);
+      outline: none;
     }
 
     .hero h1 {
@@ -264,9 +277,11 @@
 <body>
   <main class="page">
     <section class="hero">
-      <div class="badge">سياسة الخصوصية • 2ogra</div>
-      <div class="language-switch">
-        <a href="index.html" lang="en" dir="ltr">English</a>
+      <div class="hero-top">
+        <div class="badge">سياسة الخصوصية • 2ogra</div>
+        <div class="language-switch">
+          <a href="index.html" lang="en" dir="ltr">English</a>
+        </div>
       </div>
       <h1>سياسة خصوصية لتطبيق يعمل محليًا وبشكل أساسي بدون إنترنت.</h1>
       <p>
@@ -439,6 +454,7 @@
 
     <div class="footer">
       هذه هي النسخة العربية من صفحة سياسة الخصوصية الخاصة بتطبيق 2ogra.
+      إذا أردت النسخة الإنجليزية، انتقل إلى <a href="index.html" lang="en" dir="ltr">index.html</a>.
     </div>
   </main>
 </body>

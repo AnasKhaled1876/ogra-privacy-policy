@@ -7,6 +7,8 @@
     name="description"
     content="Privacy Policy for 2ogra (Ogra), the offline-first fare collection app."
   >
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="ar" href="privacy-policy-ar.html">
   <title>2ogra Privacy Policy</title>
   <style>
     :root {
@@ -77,7 +79,16 @@
       pointer-events: none;
     }
 
-    .badge {
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge,
+    .language-switch a {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -90,6 +101,18 @@
       font-weight: 700;
       letter-spacing: 0.02em;
       text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .language-switch a {
+      color: var(--text-secondary);
+    }
+
+    .language-switch a:hover,
+    .language-switch a:focus-visible {
+      border-color: rgba(245, 166, 35, 0.32);
+      color: var(--text);
+      outline: none;
     }
 
     .hero h1 {
@@ -260,7 +283,12 @@
 <body>
   <main class="page">
     <section class="hero">
-      <div class="badge">Privacy Policy • 2ogra (Ogra)</div>
+      <div class="hero-top">
+        <div class="badge">Privacy Policy • 2ogra (Ogra)</div>
+        <div class="language-switch">
+          <a href="privacy-policy-ar.html" lang="ar" dir="rtl">العربية</a>
+        </div>
+      </div>
       <h1>Privacy policy for a cash-first, offline-first app.</h1>
       <p>
         This Privacy Policy explains how 2ogra (also referred to as Ogra or أجرة)
@@ -440,8 +468,8 @@
     </div>
 
     <div class="footer">
-      This page is the English privacy policy webpage for 2ogra. If you want, the next
-      sensible follow-up is an Arabic version plus a link to this page from the app listing or README.
+      This is the English version of the 2ogra privacy policy.
+      Looking for Arabic? Visit <a href="privacy-policy-ar.html" lang="ar" dir="rtl">privacy-policy-ar.html</a>.
     </div>
   </main>
 </body>
