@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="سياسة الخصوصية الخاصة بتطبيق 2ogra (أجرة)، وهو تطبيق تحصيل أجرة يعمل محليًا وبشكل أساسي بدون إنترنت."
+  >
+  <title>سياسة الخصوصية | 2ogra</title>
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --bg-card: rgba(26, 29, 33, 0.92);
+      --bg-elevated: rgba(32, 36, 42, 0.92);
+      --text: #ffffff;
+      --text-secondary: #d1d5db;
+      --text-muted: #9ca3af;
+      --accent: #f5a623;
+      --border: rgba(245, 166, 35, 0.18);
+      --success: #22c55e;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Tahoma", "Arial", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(245, 166, 35, 0.16), transparent 28%),
+        radial-gradient(circle at top left, rgba(34, 197, 94, 0.12), transparent 24%),
+        linear-gradient(180deg, #12161a 0%, var(--bg) 100%);
+      line-height: 1.9;
+    }
+
+    a {
+      color: #ffd17a;
+    }
+
+    .page {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(245, 166, 35, 0.16), rgba(245, 166, 35, 0.04)),
+        var(--bg-card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto auto -60px -40px;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.24), transparent 70%);
+      pointer-events: none;
+    }
+
+    .badge,
+    .language-switch a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .language-switch {
+      margin-top: 16px;
+    }
+
+    .hero h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      font-size: 18px;
+      color: var(--text-secondary);
+    }
+
+    .meta,
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .meta {
+      margin-top: 24px;
+      gap: 12px;
+    }
+
+    .meta-card,
+    .summary-card,
+    .section,
+    .footer {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .meta-card {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .meta-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .meta-card span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .summary {
+      margin: 28px 0 0;
+    }
+
+    .summary-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: var(--bg-elevated);
+    }
+
+    .summary-card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    nav {
+      margin: 24px 0 18px;
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .section {
+      padding: 26px;
+      border-radius: 24px;
+      background: var(--bg-card);
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    .section p,
+    .section li {
+      color: var(--text-secondary);
+      font-size: 16px;
+    }
+
+    .section ul {
+      margin: 12px 18px 0 0;
+      padding: 0 18px 0 0;
+    }
+
+    .section li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-right: 4px solid var(--accent);
+      border-radius: 14px;
+      background: rgba(245, 166, 35, 0.08);
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 20px 22px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+    }
+
+    .status {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(var(--max-width), calc(100% - 20px));
+        padding-top: 20px;
+      }
+
+      .hero,
+      .section {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">سياسة الخصوصية • 2ogra</div>
+      <div class="language-switch">
+        <a href="privacy-policy.html" lang="en" dir="ltr">English</a>
+      </div>
+      <h1>سياسة خصوصية لتطبيق يعمل محليًا وبشكل أساسي بدون إنترنت.</h1>
+      <p>
+        توضح سياسة الخصوصية هذه كيف يتعامل تطبيق 2ogra، أو أجرة، مع المعلومات عند استخدامك للتطبيق.
+        الإصدار الحالي من التطبيق مصمم ليعمل أساسًا على جهازك، من غير الحاجة إلى حساب مستخدم
+        أو خادم سحابي حتى تعمل الوظائف الأساسية.
+      </p>
+
+      <div class="meta">
+        <div class="meta-card">
+          <strong>تاريخ السريان</strong>
+          <span>28 مارس 2026</span>
+        </div>
+        <div class="meta-card">
+          <strong>الوضع الحالي</strong>
+          <span class="status">محلي على الجهاز ويعمل بدون إنترنت افتراضيًا</span>
+        </div>
+      </div>
+
+      <div class="summary">
+        <article class="summary-card">
+          <h2>لا يحتاج إلى حساب</h2>
+          <p>التطبيق لا يطلب إنشاء حساب أو تسجيل دخول أو رقم هاتف أو بريد إلكتروني للاستخدام الطبيعي.</p>
+        </article>
+        <article class="summary-card">
+          <h2>البيانات محفوظة على جهازك</h2>
+          <p>سجلات الرحلات، وقيم الجيب، والإعدادات، والاختصارات تحفظ محليًا حتى يستمر التطبيق في العمل بدون اتصال.</p>
+        </article>
+        <article class="summary-card">
+          <h2>لا توجد منظومة إعلانات أو تحليلات نشطة</h2>
+          <p>النسخة الحالية من الكود لا تقوم بتشغيل Firebase أو تتبع الأعطال أو تحليلات سحابية أثناء الاستخدام العادي.</p>
+        </article>
+      </div>
+    </section>
+
+    <nav aria-label="أقسام سياسة الخصوصية">
+      <div class="toc">
+        <a href="#scope">النطاق</a>
+        <a href="#collect">ما الذي يخزنه التطبيق</a>
+        <a href="#use">كيف تستخدم البيانات</a>
+        <a href="#no-collect">ما الذي لا يفعله التطبيق</a>
+        <a href="#sharing">المشاركة والجهات الخارجية</a>
+        <a href="#retention">الاحتفاظ والحذف</a>
+        <a href="#security">الأمان</a>
+        <a href="#children">خصوصية الأطفال</a>
+        <a href="#changes">التغييرات</a>
+        <a href="#contact">التواصل</a>
+      </div>
+    </nav>
+
+    <div class="grid">
+      <section class="section" id="scope">
+        <h2>1. نطاق هذه السياسة</h2>
+        <p>
+          تنطبق هذه السياسة على تطبيق 2ogra نفسه وعلى المعلومات التي يتعامل معها من خلال التطبيق.
+          ولا تنطبق على كيفية تعامل Apple أو Google أو GitHub أو أي خدمات خارجية أخرى مع البيانات
+          وفق سياسات الخصوصية الخاصة بها.
+        </p>
+      </section>
+
+      <section class="section" id="collect">
+        <h2>2. ما الذي يخزنه التطبيق</h2>
+        <p>
+          لكي يقدم التطبيق وظائفه الأساسية في تحصيل الأجرة، قد يقوم بحفظ البيانات التالية محليًا على جهازك:
+        </p>
+        <ul>
+          <li>سجلات المعاملات والتسويات الخاصة بالرحلات.</li>
+          <li>قيم الجيب أو النقدية المستخدمة لحساب الباقي.</li>
+          <li>التعريفات أو الاختصارات أو الإعدادات التي تنشئها بنفسك.</li>
+          <li>تفضيلات التطبيق مثل سياسات التقريب والإعدادات العامة.</li>
+          <li>حالة تشغيل بسيطة لازمة لاستكمال العمليات المحلية غير المنتهية بأمان.</li>
+        </ul>
+        <div class="note">
+          تم تصميم 2ogra بحيث تبقى بيانات العمل الخاصة بالمستخدم على الجهاز أولًا.
+          وفي الإصدار الحالي، الاستخدام الطبيعي لا يحتاج إلى حساب مستخدم أو خادم إلزامي.
+        </div>
+      </section>
+
+      <section class="section" id="use">
+        <h2>3. كيف تُستخدم هذه البيانات</h2>
+        <ul>
+          <li>لحساب الأجرة والباقي وحالة التسوية بدقة.</li>
+          <li>لحفظ تاريخ الرحلات والتقارير على الجهاز.</li>
+          <li>لتذكر الجيب والإعدادات والاختصارات بين الجلسات.</li>
+          <li>لاستعادة حالة التطبيق المحلية بأمان بعد الإغلاق أو الانقطاع.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="no-collect">
+        <h2>4. ما الذي لا يفعله التطبيق حاليًا بشكل افتراضي</h2>
+        <p>الإصدار الحالي ليس مبنيًا على جمع بيانات شخصية. أثناء الاستخدام الطبيعي، التطبيق لا يحتاج إلى:</p>
+        <ul>
+          <li>حساب شخصي أو اسم مستخدم أو كلمة مرور.</li>
+          <li>جهات الاتصال أو الميكروفون أو الكاميرا أو الموقع الدقيق.</li>
+          <li>مزامنة سحابية لكي يعمل جمع الأجرة أو التقارير الأساسية.</li>
+          <li>بيع بياناتك أو مشاركتها لأغراض إعلانات موجهة.</li>
+        </ul>
+        <p>
+          كما أن النسخة الحالية من الكود لا تقوم بتشغيل Firebase أو تتبع الأعطال أو التحليلات
+          عن بعد أثناء الاستخدام العادي. وإذا تغير ذلك في إصدار لاحق، فسيتم تحديث هذه السياسة
+          قبل الاعتماد على هذا السلوك الجديد.
+        </p>
+      </section>
+
+      <section class="section" id="sharing">
+        <h2>5. المشاركة والجهات الخارجية وسلوك المنصات</h2>
+        <p>
+          نحن لا نشارك عمدًا بيانات التشغيل الخاصة بك داخل التطبيق مع أطراف خارجية لأغراض
+          الإعلانات أو إعادة البيع. ومع ذلك توجد بعض النقاط المرتبطة بالمنصات:
+        </p>
+        <ul>
+          <li>قد تجمع Apple App Store وGoogle Play بعض البيانات التقنية أو بيانات الفوترة أو الحماية من الاحتيال أو التنزيل وفق سياساتها الخاصة.</li>
+          <li>قد يقوم نظام تشغيل جهازك بإدراج بيانات التطبيق ضمن النسخ الاحتياطية إذا كانت النسخ الاحتياطية مفعلة على جهازك أو حسابك.</li>
+          <li>حزمة تطبيق Android الحالية تعلن عن إذن Google Advertising ID القياسي (`AD_ID`). التطبيق نفسه غير مصمم لعرض إعلانات أو إنشاء ملفات تعريف إعلانية من تاريخ معاملاتك.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="retention">
+        <h2>6. الاحتفاظ بالبيانات وحذفها</h2>
+        <p>
+          البيانات التي يخزنها التطبيق تبقى عادة على جهازك إلى أن تقوم أنت بإزالتها.
+          ويمكن حذفها بحسب الحالة من خلال مسح بيانات التطبيق أو حذف التطبيق أو حذف السجلات المحلية
+          عندما تتوفر واجهة إدارة مناسبة لذلك.
+        </p>
+      </section>
+
+      <section class="section" id="security">
+        <h2>7. الأمان</h2>
+        <p>
+          نسعى إلى أن يكون التعامل مع البيانات داخل التطبيق بسيطًا ومحدودًا قدر الإمكان.
+          ومع ذلك لا توجد أي وسيلة تخزين أو برنامج يمكنه ضمان الأمان المطلق.
+          وأنت مسؤول عن حماية جهازك من خلال كلمات مرور مناسبة وتحديثات النظام وإعدادات الأمان المتاحة.
+        </p>
+      </section>
+
+      <section class="section" id="children">
+        <h2>8. خصوصية الأطفال</h2>
+        <p>
+          2ogra مخصص كأداة عمل لتحصيل الأجرة وعمليات النقل، وليس موجّهًا للأطفال،
+          كما أنه غير مصمم لجمع معلومات شخصية من الأطفال عن علم.
+        </p>
+      </section>
+
+      <section class="section" id="changes">
+        <h2>9. التغييرات على هذه السياسة</h2>
+        <p>
+          قد يتم تحديث هذه السياسة مع تطور التطبيق. وإذا حدث تغيير جوهري في طريقة التعامل مع البيانات،
+          فسيتم نشر النسخة المحدثة هنا مع تعديل تاريخ السريان.
+        </p>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>10. التواصل</h2>
+        <p>
+          إذا كانت لديك أسئلة تتعلق بالخصوصية في 2ogra، يمكنك التواصل من خلال مستودع المشروع:
+        </p>
+        <p>
+          <a href="https://github.com/AnasKhaled1876/ogra" target="_blank" rel="noreferrer" dir="ltr">
+            github.com/AnasKhaled1876/ogra
+          </a>
+        </p>
+        <p>
+          صفحة البلاغات:
+          <a href="https://github.com/AnasKhaled1876/ogra/issues" target="_blank" rel="noreferrer" dir="ltr">
+            github.com/AnasKhaled1876/ogra/issues
+          </a>
+        </p>
+      </section>
+    </div>
+
+    <div class="footer">
+      هذه هي النسخة العربية من صفحة سياسة الخصوصية الخاصة بتطبيق 2ogra.
+    </div>
+  </main>
+</body>
+</html>
