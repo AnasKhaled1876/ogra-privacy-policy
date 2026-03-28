@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Privacy Policy for 2ogra (Ogra), the offline-first fare collection app."
+  >
+  <title>2ogra Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --bg-card: rgba(26, 29, 33, 0.92);
+      --bg-elevated: rgba(32, 36, 42, 0.92);
+      --text: #ffffff;
+      --text-secondary: #d1d5db;
+      --text-muted: #9ca3af;
+      --accent: #f5a623;
+      --accent-dark: #d48806;
+      --border: rgba(245, 166, 35, 0.18);
+      --success: #22c55e;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(245, 166, 35, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(34, 197, 94, 0.12), transparent 24%),
+        linear-gradient(180deg, #12161a 0%, var(--bg) 100%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: #ffd17a;
+    }
+
+    .page {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(245, 166, 35, 0.16), rgba(245, 166, 35, 0.04)),
+        var(--bg-card);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.24), transparent 70%);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      font-size: 18px;
+      color: var(--text-secondary);
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .meta-card {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .meta-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    .meta-card span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 28px 0 0;
+    }
+
+    .summary-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: var(--bg-elevated);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .summary-card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    nav {
+      margin: 24px 0 18px;
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .section {
+      padding: 26px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: var(--bg-card);
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .section p,
+    .section li {
+      color: var(--text-secondary);
+      font-size: 16px;
+    }
+
+    .section ul {
+      margin: 12px 0 0 18px;
+      padding: 0;
+    }
+
+    .section li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      border-radius: 14px;
+      background: rgba(245, 166, 35, 0.08);
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 20px 22px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-secondary);
+    }
+
+    .status {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(var(--max-width), calc(100% - 20px));
+        padding-top: 20px;
+      }
+
+      .hero,
+      .section {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">Privacy Policy • 2ogra (Ogra)</div>
+      <h1>Privacy policy for a cash-first, offline-first app.</h1>
+      <p>
+        This Privacy Policy explains how 2ogra (also referred to as Ogra or أجرة)
+        handles information when you use the mobile app. The current version of the
+        app is designed to work primarily on your device, without requiring an
+        account or a cloud backend for core usage.
+      </p>
+
+      <div class="meta">
+        <div class="meta-card">
+          <strong>Effective Date</strong>
+          <span>March 28, 2026</span>
+        </div>
+        <div class="meta-card">
+          <strong>Current model</strong>
+          <span class="status">Offline-first and local-only by default</span>
+        </div>
+      </div>
+
+      <div class="summary">
+        <article class="summary-card">
+          <h2>No account required</h2>
+          <p>The app does not require signup, login, phone verification, or email access for normal use.</p>
+        </article>
+        <article class="summary-card">
+          <h2>Stored on your device</h2>
+          <p>Trip records, pocket balances, presets, and settings are stored locally so the app can keep working offline.</p>
+        </article>
+        <article class="summary-card">
+          <h2>No active ad or analytics stack</h2>
+          <p>The current codebase does not initialize Firebase, crash reporting, or a remote analytics backend during normal app use.</p>
+        </article>
+      </div>
+    </section>
+
+    <nav aria-label="Privacy policy sections">
+      <div class="toc">
+        <a href="#scope">Scope</a>
+        <a href="#collect">What the app stores</a>
+        <a href="#use">How it is used</a>
+        <a href="#no-collect">What the app does not do</a>
+        <a href="#sharing">Sharing and third parties</a>
+        <a href="#retention">Retention</a>
+        <a href="#security">Security</a>
+        <a href="#children">Children</a>
+        <a href="#changes">Changes</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="grid">
+      <section class="section" id="scope">
+        <h2>1. Scope</h2>
+        <p>
+          This Privacy Policy applies to the 2ogra mobile app and the information
+          handled through the app itself. It does not control how Apple, Google,
+          GitHub, or other third-party services handle information under their own
+          privacy policies.
+        </p>
+      </section>
+
+      <section class="section" id="collect">
+        <h2>2. What the app stores</h2>
+        <p>
+          To provide its core fare-collection features, the app may store the following
+          information locally on your device:
+        </p>
+        <ul>
+          <li>Trip transactions and settlement history.</li>
+          <li>Pocket or cash inventory values used to calculate change.</li>
+          <li>Fare presets and route-related configuration you create.</li>
+          <li>App settings and usage preferences, such as rounding behavior.</li>
+          <li>Simple operational state needed to recover unfinished local actions.</li>
+        </ul>
+        <div class="note">
+          2ogra is built to keep the conductor’s working data on the device first.
+          In the current version, normal use does not require a user account or a
+          mandatory remote server.
+        </div>
+      </section>
+
+      <section class="section" id="use">
+        <h2>3. How that information is used</h2>
+        <ul>
+          <li>To calculate fares, change, and settlement status accurately.</li>
+          <li>To save your trip history and maintain reports on the device.</li>
+          <li>To remember pocket balances, presets, and settings between sessions.</li>
+          <li>To restore local app state safely after interruptions or restarts.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="no-collect">
+        <h2>4. What the app does not currently do by default</h2>
+        <p>The current build is not designed around personal data collection. In normal use, 2ogra does not require:</p>
+        <ul>
+          <li>A personal account, username, or password.</li>
+          <li>Your contacts, microphone, camera, or precise location.</li>
+          <li>Cloud sync for basic fare collection and reporting.</li>
+          <li>Selling your data or sharing it for targeted advertising.</li>
+        </ul>
+        <p>
+          The current codebase also does not actively initialize Firebase, crash
+          reporting, or remote analytics during ordinary use. If that changes in a
+          future release, this policy will be updated before the new behavior is
+          relied on.
+        </p>
+      </section>
+
+      <section class="section" id="sharing">
+        <h2>5. Sharing, third parties, and platform behavior</h2>
+        <p>
+          We do not intentionally share your in-app operational data with third
+          parties for advertising or resale. However, a few important platform notes apply:
+        </p>
+        <ul>
+          <li>Apple App Store and Google Play may collect standard technical, billing, fraud-prevention, or download-related data under their own policies.</li>
+          <li>Your device operating system may include app data in device backups if backup is enabled on your device or account.</li>
+          <li>The Android app package currently declares the standard Google advertising ID permission (`AD_ID`). The app is not designed to serve ads or build advertising profiles from your transaction history.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="retention">
+        <h2>6. Retention and deletion</h2>
+        <p>
+          Data stored by the app generally remains on your device until you remove it.
+          Depending on the feature, you can delete information by clearing app data,
+          uninstalling the app, or removing local records in a future in-app management flow.
+        </p>
+      </section>
+
+      <section class="section" id="security">
+        <h2>7. Security</h2>
+        <p>
+          We aim to keep app data handling straightforward and minimal. That said,
+          no software or device storage method can guarantee absolute security.
+          You are responsible for keeping your device protected with appropriate
+          passcodes, operating system updates, and account security controls.
+        </p>
+      </section>
+
+      <section class="section" id="children">
+        <h2>8. Children’s privacy</h2>
+        <p>
+          2ogra is intended as a work tool for fare collection and transport operations.
+          It is not directed to children, and it is not designed to knowingly collect
+          personal information from children.
+        </p>
+      </section>
+
+      <section class="section" id="changes">
+        <h2>9. Changes to this policy</h2>
+        <p>
+          This policy may be updated as the app changes. When there is a material
+          change in how information is handled, the updated version will be posted
+          on this page with a revised effective date.
+        </p>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>10. Contact</h2>
+        <p>
+          For privacy-related questions about 2ogra, you can contact the project
+          maintainer through the project repository:
+        </p>
+        <p>
+          <a href="https://github.com/AnasKhaled1876/ogra" target="_blank" rel="noreferrer">
+            github.com/AnasKhaled1876/ogra
+          </a>
+        </p>
+        <p>
+          Issue tracker:
+          <a href="https://github.com/AnasKhaled1876/ogra/issues" target="_blank" rel="noreferrer">
+            github.com/AnasKhaled1876/ogra/issues
+          </a>
+        </p>
+      </section>
+    </div>
+
+    <div class="footer">
+      This page is the English privacy policy webpage for 2ogra. If you want, the next
+      sensible follow-up is an Arabic version plus a link to this page from the app listing or README.
+    </div>
+  </main>
+</body>
+</html>
